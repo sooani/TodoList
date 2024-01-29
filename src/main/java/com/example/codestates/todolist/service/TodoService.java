@@ -4,6 +4,7 @@ import com.example.codestates.todolist.entity.Todo;
 import com.example.codestates.todolist.exception.BusinessLogicException;
 import com.example.codestates.todolist.exception.ExceptionCode;
 import com.example.codestates.todolist.repository.TodoRepository;
+import com.example.codestates.todolist.utils.CustomBeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -16,9 +17,11 @@ import java.util.Optional;
 @Transactional //
 public class TodoService {
     private final TodoRepository todoRepository;
+    private final CustomBeanUtils<Todo> beanUtils;
 
-    public TodoService(TodoRepository todoRepository) {
+    public TodoService(TodoRepository todoRepository, CustomBeanUtils<Todo> beanUtils) {
         this.todoRepository = todoRepository;
+        this.beanUtils = beanUtils;
     }
 
     // Todo 생성

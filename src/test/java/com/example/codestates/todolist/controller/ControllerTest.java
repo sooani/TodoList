@@ -1,7 +1,7 @@
 package com.example.codestates.todolist.controller;
 
 
-import com.example.codestates.todolist.dto.TodoPostDto;
+import com.example.codestates.todolist.dto.TodoDto;
 import com.example.codestates.todolist.entity.Todo;
 import com.example.codestates.todolist.mapper.TodoMapper;
 import com.example.codestates.todolist.service.TodoService;
@@ -54,12 +54,12 @@ public class ControllerTest {
     void postTodoTest() throws Exception {
         System.out.println("Post 테스트 시작");
         //given
-        TodoPostDto post = new TodoPostDto("초코파이 바나나맛 먹기", 1);
+        TodoDto.Post post = new TodoDto.Post("초코파이 바나나맛 먹기", 1, false);
 
         Todo mockResultTodo = new Todo();
         mockResultTodo.setTodoId(1L);
 
-        given(mapper.todoPostDtoToTodo(Mockito.any(TodoPostDto.class)))
+        given(mapper.todoDtoPostToTodo(Mockito.any(TodoDto.Post.class)))
                 .willReturn(new Todo());
 
         given(todoService.createTodo(Mockito.any(Todo.class)))
