@@ -1,0 +1,11 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/v1/todos' -i -X POST \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Accept: application/json' \
+    -d '{
+  "title" : "초코파이 바나나맛 먹기",
+  "todoOrder" : 1,
+  "completed" : false
+}'
+----

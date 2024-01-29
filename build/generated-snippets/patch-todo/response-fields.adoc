@@ -1,0 +1,20 @@
+|===
+|Path|Type|Description
+
+|`+todoId+`
+|`+Number+`
+|할일 식별자
+
+|`+title+`
+|`+String+`
+|할일
+
+|`+todoOrder+`
+|`+Number+`
+|순서
+
+|`+completed+`
+|`+Boolean+`
+|완료여부
+
+|===

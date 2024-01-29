@@ -1,0 +1,14 @@
+[source,http,options="nowrap"]
+----
+POST /v1/todos HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Accept: application/json
+Content-Length: 96
+Host: localhost:8080
+
+{
+  "title" : "초코파이 바나나맛 먹기",
+  "todoOrder" : 1,
+  "completed" : false
+}
+----

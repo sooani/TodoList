@@ -44,14 +44,9 @@ public class TodoService {
     public Todo patchTodo(Todo todo) {
         Todo findTodo = findVerifiedTodo(todo.getTodoId());
 
-        Optional.ofNullable(todo.getTitle())
-                .ifPresent(title -> findTodo.setTitle(title));
-        Optional.ofNullable(todo.getTodoOrder())
-                .ifPresent(todoOrder -> findTodo.setTodoOrder(todoOrder));
-        Optional.ofNullable(todo.getCompleted())
-                .ifPresent(completed -> findTodo.setCompleted(completed));
+        Todo updatingTodo = beanUtils.copyNonNullProperties(todo, findTodo);
 
-        return todoRepository.save(findTodo);
+        return todoRepository.save(updatingTodo);
     }
 
     public void deleteTodo(long todoId) {

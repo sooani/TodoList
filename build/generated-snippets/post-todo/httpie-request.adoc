@@ -1,0 +1,10 @@
+[source,bash]
+----
+$ echo '{
+  "title" : "초코파이 바나나맛 먹기",
+  "todoOrder" : 1,
+  "completed" : false
+}' | http POST 'http://localhost:8080/v1/todos' \
+    'Content-Type:application/json;charset=UTF-8' \
+    'Accept:application/json'
+----

@@ -1,0 +1,8 @@
+.+/v1/todos/{todoId}+
+|===
+|Parameter|Description
+
+|`+todoId+`
+|할일 식별자
+
+|===
