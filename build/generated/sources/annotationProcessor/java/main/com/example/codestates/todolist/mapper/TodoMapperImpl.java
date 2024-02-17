@@ -1,10 +1,12 @@
 package com.example.codestates.todolist.mapper;
 
-import com.example.codestates.todolist.dto.TodoDto;
-import com.example.codestates.todolist.entity.Todo;
+import com.todolist.domain.todo.dto.TodoDto;
+import com.todolist.domain.todo.entity.Todo;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
+
+import com.todolist.domain.todo.mapper.TodoMapper;
 import org.springframework.stereotype.Component;
 
 @Generated(

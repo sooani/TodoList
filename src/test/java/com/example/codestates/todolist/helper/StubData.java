@@ -1,6 +1,6 @@
 package com.example.codestates.todolist.helper;
 
-import com.example.codestates.todolist.dto.TodoDto;
+import com.todolist.domain.todo.dto.TodoDto;
 import org.springframework.http.HttpMethod;
 
 import java.util.HashMap;

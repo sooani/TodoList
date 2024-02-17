@@ -1,11 +1,12 @@
 package com.example.codestates.todolist.controller;
 
 
-import com.example.codestates.todolist.dto.TodoDto;
-import com.example.codestates.todolist.entity.Todo;
+import com.todolist.domain.todo.controller.TodoController;
+import com.todolist.domain.todo.dto.TodoDto;
+import com.todolist.domain.todo.entity.Todo;
 import com.example.codestates.todolist.helper.StubData;
-import com.example.codestates.todolist.mapper.TodoMapper;
-import com.example.codestates.todolist.service.TodoService;
+import com.todolist.domain.todo.mapper.TodoMapper;
+import com.todolist.domain.todo.service.TodoService;
 import com.google.gson.Gson;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
